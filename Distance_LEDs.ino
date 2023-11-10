@@ -48,20 +48,20 @@ void loop() {
   // LED light up  due to distance 
   // Run time same as function needs to called every loop.
   if (distance < 15){
-    digitalWrite(led1pin, HIGH); 
-    digitalWrite(led2pin, LOW);
-    digitalWrite(led3pin, LOW);
+    analogWrite(led1pin, 255); 
+    analogWrite(led2pin, 0);
+    analogWrite(led3pin, 0);
     
   }
   else if (distance < 30){
-    digitalWrite(led2pin, HIGH);
-    digitalWrite(led3pin, LOW);
-    digitalWrite(led1pin, LOW);
+    analogWrite(led2pin, 255);
+    analogWrite(led3pin, 0);
+    analogWrite(led1pin, 0);
   }
   else{
-    digitalWrite(led3pin, HIGH);
-    digitalWrite(led1pin, LOW);
-    digitalWrite(led2pin, LOW);
+    analogWrite(led3pin, 255);
+    analogWrite(led1pin, 0);
+    analogWrite(led2pin, 0);
   }
 
 }
