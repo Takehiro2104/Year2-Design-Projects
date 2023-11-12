@@ -22,4 +22,4 @@ void loop(){
 }
   
 // will test tmr when I have my testing kit
-
+// thanks Adrian for writing in the code with this empty file i opened but I think we're going with Isham's code :)
