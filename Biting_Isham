@@ -2,6 +2,7 @@
 
 const int ldrPin = A0;   //pin for LDR
 const int servoPin = 9;  //pin for servo motor
+const int threshold = 500;
 
 Servo jawServo;  
 
@@ -15,7 +16,7 @@ void loop() {
   Serial.println("Light Intensity: " + String(lightIntensity));
 
   // the servo angle based on light intensity
-  if (lightIntensity < 500) {
+  if (lightIntensity < threshold) {
     oscillateJaw();
   } else {
     openJaw();
