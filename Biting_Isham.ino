@@ -1,7 +1,7 @@
 #include <Servo.h>
 
-const int ldrPin = A0;   //pin for LDR
-const int servoPin = 9;  //pin for servo motor
+const int ldrPin = A2;   //pin for LDR
+const int servoPin = 3;  //pin for servo motor
 const int threshold = 500;
 
 Servo jawServo;  
