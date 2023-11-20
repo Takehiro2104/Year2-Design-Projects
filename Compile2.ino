@@ -41,14 +41,14 @@ void loop(){
 
 void functionA (){
 int LDRPinMouth = analogRead(LDRPin); //Reading value from LDR
-  if (LDRPinMouth < 100){
+  if (LDRPinMouth < 160){
       servo.write(40); //Rotate servo 180 degrees if LDR value is lower than threshold
   }else{
        servo.write(0); //return back to 0 degrees if LDR is higher than threshold
   }
   Serial.print("LDRMouth: ");
   Serial.println(LDRPinMouth);
-  delay(250);
+  delay(150);
 }
 
 void functionB (){
@@ -71,7 +71,7 @@ void functionB (){
   Serial.print("Distance = ");
   Serial.print(distance);
   Serial.println(" cm");
-  myStepper.setSpeed(200);
+  myStepper.setSpeed(10);
   // LED light up  due to distance 
   // Run time same as function needs to called every loop.
   if (distance < 15){
@@ -110,5 +110,5 @@ void functionC(){
   Serial.println(LDRPin1);
   Serial.print("LDR2: ");
   Serial.println(LDRPin2);
-  delay(250);
+  delay(150);
 }
